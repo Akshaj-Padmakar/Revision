@@ -7,7 +7,15 @@ using namespace std;
 #else
 #define debug(x...)
 #endif
+/*
+Problem -1
+We have an array A of N elements. 
+We will be asked Q queries,
+Each query is in the form of a single integer, X, and we have to tell whether there exists an index i in the array such that the bitwise AND of A[i] and X equals 0. 
+If such an index exists print YES, otherwise print NO.
 
+Constraints : 1<=N<=1e5, 1<=Q<=1e5, 1<=A[i]<=1e5
+*/
 const int LOGN = 20;
 const int INF = 1e8;
 
