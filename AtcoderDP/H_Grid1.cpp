@@ -10,7 +10,7 @@ using namespace std;
 
 #define int long long
 
-
+const int MOD = 1e9 + 7;
 void solve() {
 	int n, m;
 	cin >> n >> m;
@@ -34,6 +34,7 @@ void solve() {
 			}
 
 			dp[i][j] = (i > 0 ? dp[i - 1][j] : 0) + (j > 0 ? dp[i][j - 1] : 0);
+			dp[i][j] %= MOD;
 		}
 	}
 	cout << dp[n - 1][m - 1] << "\n";
