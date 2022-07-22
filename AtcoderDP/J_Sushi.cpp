@@ -11,6 +11,21 @@ using namespace std;
 #define int long long
 
 const int MAXN = 305;
+/*
+long double dp[302][302][302];
+
+dp[i][j][k] -> expected number of moves to have i 0's j 1's and k 2's
+dp[i][j][k] = 1 + (i/n) * dp[i][j][k] + (j/n) * dp[i+1][j-1][k] + (k/n) * dp[i][j+1][k-1] + ((n-i-j-k)/n)*dp[i][j][k+1]
+    order of loops - (i,j,k) -> (i+1,j-1,k),(i,j+1,k-1),(i,j,k+1) not solvable ?? bc it doent express the complemete information about the starting state
+ 
+    i 1's j 2's k 3's
+p_i -> probablity to get i
+dp[i][j][k] = 1 + p0 * dp[i][j][k] + p1 * dp[i-1][j][k] + p2 * dp[i+1][j-1][k] + p3 * dp[i][j+1][k-1]
+ 
+order of loop - (i,j,k) -> (i-1,j,k), (i+1,j-1,k), (i,j+1,k-1)
+
+*/
+
 void solve() {
 	int n;
 	cin >> n;
