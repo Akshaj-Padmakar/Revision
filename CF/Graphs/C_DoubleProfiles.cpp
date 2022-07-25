@@ -23,6 +23,8 @@ Given a Graph G, count the number of pairs i,j such that either i,j have a edge 
 The benift of using two hash ?
 
 So, If I use two hash we have 1/M1*M2 probablity of collision for a single comparsion, and using M1 ~ M2 ~ 10 ^9 decreases collision probablity by a lot.
+
+https://codeforces.com/contest/154/problem/C
 */
 void solve() {
 	int n, m;
